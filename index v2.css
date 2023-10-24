@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@800&display=swap");
 
 html {
-    background: linear-gradient(100deg, color(display-p3 0.1137 0.5686 0.9882) 13.57%, color(display-p3 0.3529 0.2118 0.7529) 98.38%);}
+    background: linear-gradient(100deg, color(display-p3 0.1137 0.5686 0.9882) 13.57%,
+    color(display-p3 0.3529 0.2118 0.7529) 98.38%);
+}
 
 body {
-    font-family: "Wix Madefor Display", sans-serif}
+    font-family: "Wix Madefor Display", sans-serif
+}

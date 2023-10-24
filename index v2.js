@@ -43,3 +43,14 @@ const stopSound = frequency => {
         delete activeOscillators[frequency]
     }
 }
+
+const setupButtonListeners = () => {
+    const noteButtons = document.querySelector(".note")
+    noteButtons.forEach((button, index) => {
+        const frequency = 220 * 2 ** (index/12)
+        button.addEventListener("mousedown", () => playSound(frequency))
+        button.addEventListener("mouseup", () => stopSound(frequency))
+        button.addEventListener("mouseleave", () => stopSound(frequency))
+
+    })
+}
