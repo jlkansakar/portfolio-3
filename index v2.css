@@ -1,10 +1,117 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@800&display=swap");
-
 html {
-    background: linear-gradient(100deg, color(display-p3 0.1137 0.5686 0.9882) 13.57%,
-    color(display-p3 0.3529 0.2118 0.7529) 98.38%);
+    background: linear-gradient(100deg, color(display-p3 0.1137 0.5686 0.9882) 13.57%, color(display-p3 0.3529 0.2118 0.7529) 98.38%);
+    min-height: 100vh;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    font-family: "Wix Madefor Display", sans-serif
+    font-family: "Wix Madefor Display", sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.synth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.keyboard {
+    display: flex;
+    flex: 1;
+}
+
+.note {
+    width: 60px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+    position: relative;
+}
+.note.active {
+    background-color: #f0f0f0;
+    transform: translateY(5px);
+}
+.note:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 60px;
+    border-radius: 0 0 5px 5px;
+}
+.note:hover:not(.active) {
+    background-color: #eee;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.note:active {
+    transform: translateY(15px);
+    box-shadow: none;
+}
+.note:nth-child(1) {
+    background-color: #FF6B6B;
+}
+.note:nth-child(2) {
+    background-color: #FFA06B;
+}
+.note:nth-child(3) {
+    background-color: #FFD06B;
+}
+.note:nth-child(4) {
+    background-color: #FFFF6B;
+}
+.note:nth-child(5) {
+    background-color: #BFFF6B;
+}
+.note:nth-child(6) {
+    background-color: #6BFFB6;
+}
+.note:nth-child(7) {
+    background-color: #6BD2FF;
+}
+.note:nth-child(8) {
+    background-color: #936BFF;
+}
+
+#waveform {
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+#waveform:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+#waveform:focus {
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 0px 2px #3498db;
+}
+
+View SCSS Code
+
