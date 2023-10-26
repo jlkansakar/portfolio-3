@@ -1,12 +1,20 @@
-const audioContext = new (window.AudioContext || window.webkitAudioContext)()
+let audioContext;
+window.onload = function () {
+    audioContext = new (window.AudioContext)
+}
+const noteElement = document.querySelectorAll(".note")
+console.log(noteElement)
+/*noteElement.addEventListener("click", () => {
+    audioContext.resume().then(() => {
+    })
+});*/
 const activeOscillators = {}
-const waveformSelector = document.querySelector("#waveform")
+const waveformSelector = document.querySelectorAll("#waveform")
 const getSelectedWaveform = () => waveformSelector.value
-waveformSelector.addEventListener("change", function() {
-    selectedWaveform = getSelectedWaveform();
-});
-
 let selectedWaveform = getSelectedWaveform()
+
+
+
 
 const createOscillatorNode = frequency => {
     const oscillator = audioContext.createOscillator()
@@ -45,7 +53,7 @@ const stopSound = frequency => {
 }
 
 const setupButtonListeners = () => {
-    const noteButtons = document.querySelector(".note")
+    const noteButtons = document.querySelectorAll(".note")
     noteButtons.forEach((button, index) => {
         const frequency = 220 * 2 ** (index/12)
         button.addEventListener("mousedown", () => playSound(frequency))
