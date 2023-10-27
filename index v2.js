@@ -17,7 +17,7 @@ waveformSelector.addEventListener("change", function() {
 });
 
 
-// laver en node. Der bruges kommandoer fra audioContext.
+// laver en node. Den har to dele, værende oscilattor og gainNode. Oscillator er den lydbølge den har, altså enten en sine-bølge eller en square-bølge osv. GainNode'et har med gain (volume) at gøre.
 const createOscillatorNode = frequency => {
     const oscillator = audioContext.createOscillator()
     const gainNode = audioContext.createGain()
