@@ -2,17 +2,14 @@ let audioContext;
 window.onload = function () {
     audioContext = new (window.AudioContext)
 }
-const noteElement = document.querySelectorAll(".note")
-console.log(noteElement)
-/*noteElement.addEventListener("click", () => {
-    audioContext.resume().then(() => {
-    })
-});*/
 const activeOscillators = {}
-const waveformSelector = document.querySelectorAll("#waveform")
+const waveformSelector = document.querySelector("#waveform")
 const getSelectedWaveform = () => waveformSelector.value
 let selectedWaveform = getSelectedWaveform()
-
+console.log(selectedWaveform)
+waveformSelector.addEventListener("change", function() {
+    selectedWaveform = getSelectedWaveform();
+});
 
 
 
