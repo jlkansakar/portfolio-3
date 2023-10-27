@@ -1,14 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@800&display=swap");
 html {
-    background: linear-gradient(100deg, color(display-p3 0.1137 0.5686 0.9882) 13.57%, color(display-p3 0.3529 0.2118 0.7529) 98.38%);
+    background: linear-gradient(100deg, color(display-p3 0.468 0.388 0.607) 13.57%, color(display-p3 0.3529 0.2118 0.7529) 98.38%);
     min-height: 100vh;
     color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    font-family: "Wix Madefor Display", sans-serif;
+    font-family: sans-serif;
     text-align: center;
     margin: 0;
     display: flex;
@@ -24,17 +21,18 @@ h1 {
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
+h4 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
 .synth {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
     margin-top: 20px;
-}
-
-.keyboard {
-    display: flex;
-    flex: 1;
 }
 
 .note {
@@ -62,35 +60,35 @@ h1 {
 }
 .note:hover:not(.active) {
     background-color: #eee;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .note:active {
     transform: translateY(15px);
     box-shadow: none;
 }
 .note:nth-child(1) {
-    background-color: #FF6B6B;
+    background-color: #225f75;
 }
 .note:nth-child(2) {
-    background-color: #FFA06B;
+    background-color: #1f5669;
 }
 .note:nth-child(3) {
-    background-color: #FFD06B;
+    background-color: #1b4c5e;
 }
 .note:nth-child(4) {
-    background-color: #FFFF6B;
+    background-color: #184352;
 }
 .note:nth-child(5) {
-    background-color: #BFFF6B;
+    background-color: #143946;
 }
 .note:nth-child(6) {
-    background-color: #6BFFB6;
+    background-color: #11303b;
 }
 .note:nth-child(7) {
-    background-color: #6BD2FF;
+    background-color: #0e262f;
 }
 .note:nth-child(8) {
-    background-color: #936BFF;
+    background-color: #0a1c23;
 }
 
 #waveform {
@@ -99,19 +97,19 @@ h1 {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: color(display-p3 0.468 0.388 0.607) ;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 #waveform:hover {
     background-color: #f0f0f0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 #waveform:focus {
     outline: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 0px 2px #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 2px #3498db;
 }
 
-View SCSS Code
+
 
