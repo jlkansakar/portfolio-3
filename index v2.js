@@ -42,7 +42,7 @@ const playSound = frequency => {
     }
 }
 
-// hvis lyd = true, slet den aktive oscillator.
+// hvis lyd = true, slet den aktive oscillator. Hvis if-statement er true, så tager den activeOscillator og bryder den i to stykker, værende oscillator og gainNode. gainNode'ets gain (volume) bliver derefter frosset, og skruet lineært ned. Herefter bliver det slettet.
 const stopSound = frequency => {
     if (activeOscillators[frequency]) {
         const {oscillator, gainNode} = activeOscillators[frequency]
