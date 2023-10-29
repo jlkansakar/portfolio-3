@@ -67,3 +67,5 @@ const setupButtonListeners = () => {
 }
 // kører funktionen
 setupButtonListeners()
+
+alert("To play the synth, click and hold on any of the buttons.")
