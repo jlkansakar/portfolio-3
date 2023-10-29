@@ -68,4 +68,9 @@ const setupButtonListeners = () => {
 // kører funktionen
 setupButtonListeners()
 
-alert("To play the synth, click and hold on any of the buttons.")
+// setup for visning af spillemetode.
+document.onreadystatechange = function() {
+    if (document.readyState === "complete") {
+        alert("To play the synth, click and hold on any of the buttons.");
+    }
+}
